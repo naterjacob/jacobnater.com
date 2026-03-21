@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Nater | Resume</title>
+    <meta
+      name="description"
+      content="Personal resume site highlighting software development, marching band instruction, and hobbies."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Jacob Nater</h1>
+      </header>
+
+      <div class="layout">
+        <nav class="directory" role="tablist" aria-label="Resume sections">
+          <h2>Sections</h2>
+          <button class="tab-button is-active" role="tab" aria-selected="true" data-tab="software" id="tab-software">
+            Software
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="performing-arts" id="tab-performing-arts">
+            Performing Arts
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="hobby" id="tab-hobby">
+            Hobby
+          </button>
+        </nav>
+
+        <section class="content-card" aria-labelledby="tab-software">
+          <article id="markdown-content" class="markdown-body"></article>
+          <p id="status" class="status" aria-live="polite"></p>
+        </section>
+      </div>
+
+      <section class="contact-card" aria-label="Contact information">
+        <h2>Contact</h2>
+        <ul id="contact-list" class="contact-list"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
